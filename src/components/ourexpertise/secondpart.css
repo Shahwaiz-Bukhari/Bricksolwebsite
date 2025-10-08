@@ -1,0 +1,47 @@
+.secondPartIcon {
+  height: 60px;
+  width: 60px;
+  margin-left: auto;
+  margin-bottom: 16px;
+  display: block;
+  margin-right: 30px;
+  margin-top: 10px;
+}
+
+.secondPartWomenWearingVr {
+  height: 100%;
+  margin-top: -10%;
+  object-fit: cover;
+  width: 120%;
+  transition: all 0.5s ease-in-out; 
+}
+
+.secondPartRightSectionContainer{
+  transition: all 0.5s ease-in-out;
+}
+
+.secondPartRightSectionContainer:hover{
+  background: -webkit-linear-gradient(95deg, rgb(0, 71, 255) 5%,  rgb(0, 250, 255)  95%) ;
+}
+
+.secondPartRightSectionContainer:hover .secondPartWomenWearingVr{
+  opacity: 0.8;
+}
+
+.secondPartRightSectionContainer:hover .getAQuoteTextContainer{
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 5%, rgb(0, 71, 255) 100%) ;
+}
+
+
+.getAQuoteTextContainer{
+  font-family: var(--syne-font--);
+}
+@media (max-width: 900px) {
+  .secondPartWomenWearingVr {
+    height: 100%;
+    width: 70%;
+    margin-right: auto;
+    margin-left: 5%;
+    margin-top: -10%;
+  }
+}

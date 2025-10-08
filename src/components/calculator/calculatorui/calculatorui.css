@@ -1,0 +1,751 @@
+.calclulatorSectionHeadingSubContainer {
+  padding-top: 6rem;
+  text-align: center;
+}
+
+.calclulatorSectionHeadingSubContainer h1 {
+  letter-spacing: -0.07em;
+  line-height: 110%;
+  font-weight: 600;
+  font-size: 64px;
+  color: white;
+  font-family: var(--syne-font--);
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.calclulatorSectionHeadingSubContainer h4 {
+  line-height: 160%;
+  font-weight: 400;
+  font-size: 15px;
+  font-family: var(--syne-font--);
+  -webkit-font-smoothing: antialiased;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4rem;
+  max-width: 32rem;
+  text-align: center;
+  color: white;
+}
+
+.calculatorProgressIndicatorContainer {
+  position: sticky;
+  z-index: 10;
+  width: 100%;
+  top: 90px;
+  background-color: #01142c99;
+}
+
+.calculatorProgressIndicatorSubContainer {
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 6rem;
+  border-radius: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 100%;
+  max-width: 935px;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.calculatorProgressIndicatorSubSubContainer {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.calculatorProgressIndicatorEntityContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.calculatorProgressIndicatorEntityDotContainer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.calculatorProgressIndicatorEntityDot {
+  z-index: 10;
+  display: inline-flex;
+  height: 1.25rem;
+  width: 1.25rem;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-clip: content-box;
+  padding: 0.25rem;
+  background-color: rgb(43, 43, 43);
+}
+
+.calculatorProgressIndicatorEntityLine {
+  position: absolute;
+  left: 103px;
+  height: 1px;
+  width: 100%;
+  background-color: rgb(43, 43, 43);
+}
+
+.calculatorProgressIndicatorEntityDiv1 {
+  margin-bottom: -0.5rem;
+  display: flex;
+  height: 1.75rem;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-bottom: 0.125rem;
+}
+
+.calculatorProgressIndicatorEntityDiv1 span {
+  line-height: 160%;
+  font-weight: 400;
+  font-family: var(--syne-font--);
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  display: none;
+  z-index: 20;
+  border-radius: 0.25rem;
+  border-width: 1px;
+  border-color: rgb(0, 250, 255);
+  padding: 0.25rem;
+  font-size: 8px;
+}
+
+.calculatorProgressIndicatorEntityName {
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  margin-bottom: 0px;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  padding: 0.25rem 1rem;
+  text-align: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: var(--syne-font--);
+  font-weight: 400;
+  /* color: white; */
+  background-color: transparent;
+}
+
+.calculatorProgressIndicatorEntityPrice {
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: white;
+}
+
+.calculatorProgressIndicatorEntityMobile {
+  display: none;
+}
+
+.calculatorMainContentContainer {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1110px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.calculatorProgressIndicatorEntityPrice.active {
+  color: rgb(0, 250, 255);
+}
+
+.calculatorProgressIndicatorEntityName.active {
+  color: rgb(0, 62, 219);
+}
+
+.calculatorProgressIndicatorEntityDot.active {
+  background-color: rgb(5, 62, 205);
+}
+
+.calculatorProgressIndicatorEntityLine.active {
+  background: -webkit-linear-gradient(
+    -45deg,
+    rgb(0, 250, 255) 5%,
+    rgb(0, 71, 255) 95%
+  );
+}
+
+.calculatorMainSectionsContentContainer {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.calculatorMainSectionHeadingContainerDiv {
+  width: 47rem;
+}
+
+.calculatorMainSectionHeadingContainerDiv h2 {
+  letter-spacing: -0.03em;
+  line-height: 110%;
+  font-weight: 600;
+  font-size: 44px;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  align-self: flex-start;
+  color: white;
+  font-family: var(--syne-font--);
+}
+
+.calculatorMainSectionHouseOptionsContainer {
+  width: 47rem;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  border-radius: 0.375rem;
+  background-color: #01142c99;
+  position: relative;
+  margin-top: 0.125rem;
+  margin-bottom: 0.125rem;
+  flex-direction: column;
+  row-gap: 1.25rem;
+  padding: 1.5rem 2rem;
+  display: flex;
+}
+
+.calculatorMainSectionHouseOptionsHeadingContainer {
+  display: flex;
+  width: 66.6667%;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.calculatorMainSectionHouseOptionsHeadingSubContainer {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  column-gap: 0.25rem;
+}
+
+.calculatorMainSectionHouseOptionsHeadingSubContainer h6 {
+  letter-spacing: -0.03em;
+  line-height: 140%;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 600;
+  color: white;
+  font-family: var(--syne-font--);
+}
+
+.calculatorMainSectionHouseOptionsBuildingsContainer {
+  display: grid;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0px, 1fr));
+  column-gap: 0.625rem;
+  gap: 0.625rem;
+}
+
+.calculatorMainSectionHouseOptionsBuildingsLabel {
+  position: relative;
+  cursor: pointer;
+  border-radius: 0.75rem;
+  border-width: 1px;
+  padding: 1rem 1.25rem;
+  background-color: #1d283594;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgb(0, 250, 255);
+}
+
+.calculatorMainSectionHouseOptionsBuildingsLabel input {
+  position: absolute;
+  left: 1.25rem;
+  display: block;
+  height: 0px;
+  width: 0px;
+  appearance: none;
+}
+
+.calculatorMainSectionHouseOptionsBuildingsLabel input::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: rgb(5, 62, 205);
+  position: absolute;
+  top: 2px;
+  display: block;
+  cursor: pointer;
+  border-radius: 50%;
+  filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 20px);
+}
+
+.calculatorMainSectionHouseOptionsContent {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  row-gap: 1.25rem;
+}
+
+.calculatorMainSectionHouseOptionsContent p {
+  line-height: 160%;
+  font-weight: 400;
+  font-size: 15px;
+  font-family: var(--syne-font--);
+  -webkit-font-smoothing: antialiased;
+  color: white;
+}
+
+.calculatorMainSectionHouseOptionsContent img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.calculatorMainSectionHouseOptionsBuildingsLabel.selected {
+  background-color: #01142c99;
+}
+
+.calculatorMainSectionHouseOptionsBuildingsLabel.selected input::after {
+  border: 5px solid rgb(0, 250, 255);
+}
+
+.calculatorMainSectionHouseOptionsAbout3dModelsContainer {
+  position: relative;
+  margin-top: 0.125rem;
+  margin-bottom: 0.125rem;
+  width: 47rem;
+  padding: 1.5rem 2rem;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  border-radius: 0.375rem;
+  background-color: #01142c99;
+  flex-direction: column;
+  row-gap: 1.25rem;
+  display: flex;
+}
+
+.calculatorMainSectionHouseOptionsAbout3dModelsContainerWithCounter {
+  position: relative;
+  margin-top: 0.125rem;
+  margin-bottom: 0.125rem;
+  width: 47rem;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  border-radius: 0.375rem;
+  background-color: #01142c99;
+  padding: 1.5rem 2rem;
+  display: flex;
+}
+
+.calculatorMainSectionHouseOptionCounterDisplayNumber {
+  display: flex;
+  width: 2rem;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 0.375rem;
+  text-align: center;
+  color:white;
+}
+
+.calculatorMainSectionHouseOptionsAbout3dModelsRadioContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.calculatorMainSectionHouseOptionsContentRadio {
+  align-items: flex-start;
+  justify-content: left;
+  margin-left: 2.5rem;
+}
+
+.calculatorMainSectionHouseOptionCounterContainer {
+  display: flex;
+  height: 1.75rem;
+  width: fit-content;
+  align-self: center;
+  overflow: hidden;
+}
+
+.calculatorMainSectionHouseOptionCounterOptionIcon {
+  display: flex;
+  width: 1.75rem;
+  -webkit-box-align: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 0.375rem;
+  border-width: 1px;
+  border-color: rgb(0, 250, 255);;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: rgb(0, 250, 255);;
+}
+
+.calculatorMainSectionHouseOptionCounterDisplayNumber input {
+  display: flex;
+  height: 1.75rem;
+  width: 2rem;
+  -webkit-box-pack: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  background-color: transparent;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 600;
+  color: white;
+}
+
+.calculatorMainSectionHouseOptionsCheckButton {
+  position: relative;
+  display: inline-block;
+  height: 26px;
+  width: 50px;
+  cursor: pointer;
+  align-self: center;
+  border-radius: 1.5rem;
+  border-width: 1px;
+  border-color: rgb(0, 250, 255);
+  background-color: transparent;
+  transition-duration: 500ms;
+}
+
+.calculatorMainSectionHouseOptionsCheckButton.checked {
+  background-color: rgb(0, 250, 255);
+}
+
+.calculatorMainSectionHouseOptionsCheckButton span {
+  position: absolute;
+  top: 50%;
+  margin-left: 0.125rem;
+  margin-right: 0.125rem;
+  height: 22px;
+  width: 22px;
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-translate-x: 0px;
+  border-radius: 9999px;
+  background-color: rgb(0, 250, 255);
+  transition-duration: 500ms;
+}
+
+.calculatorMainSectionHouseOptionsCheckButton input {
+  height: 0px;
+  width: 0px;
+  appearance: none;
+  position: absolute;
+}
+
+.calculatorMainSectionHouseOptionsCheckButton input:checked + span {
+  --tw-translate-y: -50%;
+  border-radius: 9999px;
+  transition-duration: 500ms;
+  --tw-translate-x: 100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  background-color: #01142c99;
+}
+
+.calculatorPageButtonContainer {
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  width: 100%;
+  background-color: #01142c99;
+  padding: 2rem;
+}
+
+.calculatorPageButtonSubContainer {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  width: 50rem;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.calculatorPagePriceContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.calculatorPagePriceContainer h6 {
+  line-height: 160%;
+  font-weight: 400;
+  font-size: 15px;
+  font-family: var(--syne-font--);
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  margin-bottom: 0.75rem;
+}
+
+.calculatorPagePriceContainer h2 {
+  font-size: 44px;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+  color: white;
+  font-family: var(--syne-font--);
+  -webkit-font-smoothing: antialiased;
+  line-height: 2rem;
+}
+
+.calculatorPageButtonContentContainer {
+  display: flex;
+  height: 3rem;
+}
+
+.calculatorPageButton {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 9999px;
+  font-family: var(--syne-font--);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0.875rem 30px;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  background-color: #1d283594;
+  font-weight: 600;
+  color: white;
+  flex-direction: row-reverse;
+  gap: 0.375rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.calculatorPageButton svg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: var(--secondary-color--);
+  height: 1.5rem;
+  width: 1rem;
+  margin-right: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.calculatorPageButton:hover {
+  background-color: rgb(0, 250, 255);
+  color: black;
+}
+
+.calculatorPageButton:hover svg {
+  color: black;
+}
+
+.calculatorMainSectionHouseOptionsHeadingHelpContainer {
+  margin-bottom: -0.375rem;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+
+.calculatorMainSectionHouseOptionsHelpInfoContainer {
+  left: 1.5rem;
+  top: 0.75rem;
+  margin-left: 0px;
+  z-index: 10;
+  position: absolute;
+  width: 300px;
+  overflow: clip;
+  border-radius: 0.75rem;
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),
+    0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  min-width: 200px;
+  border: 1px solid rgb(0, 250, 255);
+}
+
+.calculatorMainSectionHouseOptionsHelpInfoImageDiv {
+  display: flex;
+  height: 10rem;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #1d2835eb;
+}
+
+.calculatorMainSectionHouseOptionsHelpInfoImage {
+  width: 100%;
+  border-radius: 0.25rem;
+  padding: 30px 1.25rem;
+}
+
+.calculatorMainSectionHouseOptionsHelpInfoDiv {
+  background-color: #00060d;
+  padding: 0.625rem;
+}
+
+.calculatorMainSectionHouseOptionsHelpInfoDiv p {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-bottom: 0.5rem;
+  font-family: var(--syne-font--);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+  color: white;
+}
+
+.calculatorMainSectionHouseOptionsHelpInfoImageDivNoSvg {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  border-radius: 0;
+}
+
+.calculatorMainSectionHouseOptionsHelpInfoDescription {
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  padding-bottom: 0.625rem;
+  text-align: center;
+  font-family: var(--syne-font--);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 300;
+  color: white !important;
+  opacity: 0.8;
+}
+
+
+@media (max-width: 900px) {
+  .calculatorProgressIndicatorContainer {
+    position: fixed;
+  }
+
+  .calculatorProgressIndicatorEntityName {
+    font-size: 10px;
+    display: none;
+  }
+
+  .calculatorProgressIndicatorEntityPrice {
+    font-size: 9px;
+  }
+
+  .calculatorProgressIndicatorEntityLine {
+    left: 12vw;
+  }
+
+  .calculatorProgressIndicatorSubContainer {
+    padding: 0.5rem 0;
+    max-width: 100%;
+  }
+
+  .calculatorProgressIndicatorEntityMobile {
+    display: block;
+    text-align: center;
+    font-size: 10px;
+    padding: 0.25rem;
+    color: white;
+  }
+
+  .calclulatorSectionHeadingSubContainer h1 {
+    font-size: 45px;
+  }
+
+  .calclulatorSectionHeadingSubContainer h4 {
+    font-size: 15px;
+  }
+
+  .calclulatorSectionHeadingSubContainer {
+    padding-top: 210px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .calculatorMainSectionHeadingContainerDiv {
+    width: 100%;
+  }
+
+  .calculatorMainSectionHouseOptionsContainer {
+    width: 100%;
+  }
+
+  .calculatorMainSectionHouseOptionsContainer {
+    padding: 1.25rem 0.625rem;
+  }
+
+  .calculatorMainSectionHouseOptionsAbout3dModelsContainer {
+    width: 100%;
+    padding: 1.25rem 0.625rem;
+  }
+
+  .calculatorMainSectionHouseOptionsContentRadio {
+    margin-left: 2.5rem;
+  }
+
+  .calculatorMainContentContainer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .calculatorMainSectionHouseOptionsAbout3dModelsContainerWithCounter {
+    width: 100%;
+    padding: 1.25rem 0.625rem;
+  }
+
+  .calculatorPagePriceContainer h2 {
+    font-size: 30px;
+  }
+
+  .calculatorPageButtonContainer {
+    padding: 1rem;
+  }
+
+  .calculatorPageButtonSubContainer {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .calculatorMainSectionHouseOptionsHeadingSubContainer {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: unset;
+    align-items: unset;
+  }
+
+  .calculatorMainSectionHouseOptionsHelpInfoContainer {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    width: 280px;
+    top: 1.3em;
+  }
+}
+
+@media (max-width: 780px) {
+  .calculatorMainSectionHouseOptionsBuildingsContainer {
+    grid-template-columns: repeat(1, minmax(0px, 1fr));
+    text-align: center;
+  }
+
+  .calculatorPageButtonSubContainer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

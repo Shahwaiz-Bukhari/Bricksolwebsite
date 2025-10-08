@@ -1,0 +1,96 @@
+import React, { useState, useEffect, lazy, Suspense } from "react";
+import { ThemeProvider, CssBaseline, Box } from "@mui/material";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import theme from "../../styles/theme";
+
+import NavBar from "../navbar/NavBar";
+import Home from "../home/Home";
+import ClientsGrid from "../clientsGrid/ClientsGrid";
+import Featured from "../featuredwork/Featured";
+import SliderSection from "../featuredwork/SliderSection";
+import CarouselSection from "../carouselSection/CarouselSection";
+import ServicesSection from "../servicessection/ServicesSection";
+import ClientExperience from "../experience/ClientExperience";
+import ReachoutSection from "../reachout/ReachoutSection";
+import Footer from "../footer/Footer";
+
+import Preloader from "../preloader/Preloader";
+import { CalculatorMain } from "../calculator/calculatormain/CalculatorMain";
+import Projects from "../projects/Projects";
+import ProductShowcase from "../projects/ProductShowcase";
+
+const CategoryPage = lazy(() => import("../pages/CategoryPage"));
+const ProductPage = lazy(() => import("../pages/ProductPage"));
+const Portfolio = lazy(() => import("../portfolio/Portfolio"));
+const About = lazy(() => import("../about/About"));
+
+const Mind = () => {
+  const [showPreloader, setShowPreloader] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPreloader(false);
+    }, 4000); 
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Router>
+        <Box sx={{ bgcolor: "background.default", minHeight: "100vh", position: "relative" }}>
+         
+          <NavBar />
+
+          <Suspense fallback={<div>Loading...</div>}>
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <>
+                    <Home />
+                    <ProductShowcase />
+                    <ClientsGrid />
+                    <Projects />
+                    <Featured />
+                    <SliderSection />
+                    <CarouselSection />
+                    <ServicesSection />
+                    <ClientExperience />
+                    <ReachoutSection />
+                    <Footer />
+                  </>
+                }
+              />
+              <Route path="/services/:categoryId" element={<CategoryPage type="services" />} />
+              <Route path="/industries/:categoryId" element={<CategoryPage type="industries" />} />
+              <Route path="/products/:categoryId" element={<ProductPage />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/calculator" element={<CalculatorMain />} />
+            </Routes>
+          </Suspense>
+
+          {showPreloader && (
+            <Box
+              sx={{
+                position: "fixed",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                bgcolor: "black",
+                zIndex: 2000, 
+              }}
+            >
+              <Preloader />
+            </Box>
+          )}
+        </Box>
+      </Router>
+    </ThemeProvider>
+  );
+};
+
+export default Mind;
