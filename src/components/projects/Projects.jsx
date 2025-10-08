@@ -174,13 +174,13 @@ const Projects = () => {
   }, []);
 
   return (
-    <Box sx={{ width: "100%", background: "#000", py: 6 }}>
+    <Box sx={{ width: "100%", background: "#000", py: 6 , maxWidth: "1400px" , mx: "auto"}}>
       {/* Animated Heading */}
       <Typography
         ref={headingRef}
         variant="h4"
         sx={{
-          color: "#c9dbfdff",
+          color: "white",
           fontWeight: 700,
           fontSize: { xs: "28px", md: "36px" },
           lineHeight: 1.2,

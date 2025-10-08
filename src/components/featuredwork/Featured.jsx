@@ -52,7 +52,7 @@ const Featured = () => {
             ref={leftTextRef}
             variant="h4"
             sx={{
-              color: "#c9dbfdff",
+              color: "white",
               fontWeight: 700,
               fontSize: { xs: "28px", md: "36px" },
               lineHeight: 1.2,

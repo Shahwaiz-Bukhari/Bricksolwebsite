@@ -30,7 +30,7 @@ const products = [
 
 const ProductShowcase = () => {
   return (
-    <Box sx={{ width: "97%", bgcolor: "black", py: 8, px: 3 }}>
+    <Box sx={{ width: "97%", bgcolor: "black", py: 8, px: 3, maxWidth: "1400px", mx:"auto" }}>
       {/* Heading */}
       <Typography
         variant="h4"
