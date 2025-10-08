@@ -33,7 +33,7 @@ const images = [
     subtitle: "Virtual sales redefined.",
     description:
       "Transform client interactions with an intelligent, interactive virtual sales centre that delivers walkthroughs, demos, and real-time engagement.",
-    video: "/videos/smartspatial.mp4",
+    video: "/videos/smartspatial.webm",
   },
 ];
 
