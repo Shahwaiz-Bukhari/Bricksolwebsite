@@ -135,8 +135,9 @@
   letter-spacing: 2px;
   font-family: var(--syne-font--);
   font-weight: 400;
-  /* color: white; */
+  color: white;
   background-color: transparent;
+  border-style: none;
 }
 
 .calculatorProgressIndicatorEntityPrice {

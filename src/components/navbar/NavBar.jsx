@@ -183,6 +183,15 @@ const Navbar = () => {
             >
               About
             </Link>
+            <Link
+            to="/calculator"
+             style={{
+                color: "white",
+                textDecoration: "none",
+                fontWeight: 500,
+              }}>
+              Calculator
+            </Link>
           </Box>
 
           {/* Desktop CTA */}
