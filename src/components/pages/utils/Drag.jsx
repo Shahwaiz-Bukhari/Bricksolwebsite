@@ -1,15 +1,17 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Box, Typography } from "@mui/material";
 import { useParams } from "react-router-dom";
 import { pageData } from "../../../data/pageData";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ArcButton from "../../../app/global-components/ctaButton/ArcButton";
+import { PopupModal } from "react-calendly";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Drag = () => {
   const leftTextRef = useRef(null);
+  const [openCalendly, setOpenCalendly] = useState(false);
 
   useEffect(() => {
     const elem = leftTextRef.current;
@@ -99,9 +101,17 @@ const Drag = () => {
           >
             {data.paragraph}
           </Typography>
-          <ArcButton text="Connect With Us" />
+          <Box sx={{ ml: "20px" }}>
+             <ArcButton text="Connect With Us" onClick={() => setOpenCalendly(true)} />
+            </Box> 
         </Box>
       </Box>
+      <PopupModal
+        url="https://calendly.com/YOUR_USERNAME/YOUR_EVENT"
+        onModalClose={() => setOpenCalendly(false)}
+        open={openCalendly}
+        rootElement={document.getElementById("root")}
+      />
     </Box>
   );
 };

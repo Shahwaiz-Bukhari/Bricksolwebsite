@@ -283,7 +283,7 @@
   height: 20px;
   background-color: rgb(5, 62, 205);
   position: absolute;
-  top: 2px;
+  top: 13px;
   display: block;
   cursor: pointer;
   border-radius: 50%;
@@ -393,6 +393,7 @@
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: rgb(0, 250, 255);;
+  background: #01142c99;
 }
 
 .calculatorMainSectionHouseOptionCounterDisplayNumber input {
@@ -429,7 +430,7 @@
 
 .calculatorMainSectionHouseOptionsCheckButton span {
   position: absolute;
-  top: 50%;
+  top: 8%;
   margin-left: 0.125rem;
   margin-right: 0.125rem;
   height: 22px;

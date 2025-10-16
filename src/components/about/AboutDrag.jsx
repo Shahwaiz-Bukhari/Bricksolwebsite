@@ -83,7 +83,9 @@ const AboutDrag = () => {
             We craft future-ready solutions designed around your business.
             Our fusion of insight, design, and tech ensures lasting impact.
           </Typography>
-          <ArcButton text="Connect With Us" onClick={() => setOpenCalendly(true)} />
+          <Box sx={{ ml: "20px" }}>
+             <ArcButton text="Connect With Us" onClick={() => setOpenCalendly(true)} />
+            </Box>
         </Box>
       </Box>
       {/* Calendly Popup */}

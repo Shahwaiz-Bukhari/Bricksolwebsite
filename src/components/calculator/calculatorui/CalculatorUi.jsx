@@ -688,7 +688,7 @@ const CalculatorUi = () => {
     <div
       className="w-full"
       style={{
-        backgroundColor: "#00060d",
+        backgroundColor: "transparent",
       }}
     >
       <section className="calclulatorSectionHeadingContainer">
