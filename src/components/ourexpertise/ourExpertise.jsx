@@ -118,6 +118,7 @@ const OurExpertise = () => {
                         sx={{
                           fontFamily: "var(--syne-font--)",
                           fontWeight: "bold",
+                          color: "rgb(121 146 194)",
                           fontSize: "2.5rem",
                           "@media (max-width: 940px)": {
                             fontSize: "2.5rem",

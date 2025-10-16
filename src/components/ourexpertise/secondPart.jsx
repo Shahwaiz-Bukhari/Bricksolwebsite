@@ -72,6 +72,7 @@ const SecondPart = () => {
                     fontWeight="bold"
                     sx={{
                       fontFamily: "var(--syne-font--)",
+                      color: "rgb(121 146 194)",
                       fontSize: "30px",
                     }}
                   >
