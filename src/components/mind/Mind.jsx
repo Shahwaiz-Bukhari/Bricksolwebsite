@@ -14,10 +14,10 @@ import ClientExperience from "../experience/ClientExperience";
 import ReachoutSection from "../reachout/ReachoutSection";
 import Footer from "../footer/Footer";
 
-import Preloader from "../preloader/Preloader";
 import { CalculatorMain } from "../calculator/calculatormain/CalculatorMain";
 import Projects from "../projects/Projects";
 import ProductShowcase from "../projects/ProductShowcase";
+import { HashLoader } from "react-spinners"; 
 
 const CategoryPage = lazy(() => import("../pages/CategoryPage"));
 const ProductPage = lazy(() => import("../pages/ProductPage"));
@@ -30,8 +30,7 @@ const Mind = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPreloader(false);
-    }, 4000); 
-
+    }, 3000); 
     return () => clearTimeout(timer);
   }, []);
 
@@ -39,8 +38,13 @@ const Mind = () => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
-        <Box sx={{ bgcolor: "background.default", minHeight: "100vh", position: "relative" }}>
-         
+        <Box
+          sx={{
+            bgcolor: "background.default",
+            minHeight: "100vh",
+            position: "relative",
+          }}
+        >
           <NavBar />
 
           <Suspense fallback={<div>Loading...</div>}>
@@ -63,8 +67,14 @@ const Mind = () => {
                   </>
                 }
               />
-              <Route path="/services/:categoryId" element={<CategoryPage type="services" />} />
-              <Route path="/industries/:categoryId" element={<CategoryPage type="industries" />} />
+              <Route
+                path="/services/:categoryId"
+                element={<CategoryPage type="services" />}
+              />
+              <Route
+                path="/industries/:categoryId"
+                element={<CategoryPage type="industries" />}
+              />
               <Route path="/products/:categoryId" element={<ProductPage />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/about" element={<About />} />
@@ -81,10 +91,14 @@ const Mind = () => {
                 width: "100%",
                 height: "100%",
                 bgcolor: "black",
-                zIndex: 2000, 
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                zIndex: 2000,
               }}
             >
-              <Preloader />
+              {/* ✅ Replace Preloader with HashLoader */}
+              <HashLoader color="#97af90" size={80} />
             </Box>
           )}
         </Box>
