@@ -1,6 +1,6 @@
 import React, { useState, useEffect, lazy, Suspense } from "react";
 import { ThemeProvider, CssBaseline, Box } from "@mui/material";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import theme from "../../styles/theme";
 
 import NavBar from "../navbar/NavBar";
@@ -13,6 +13,8 @@ import ServicesSection from "../servicessection/ServicesSection";
 import ClientExperience from "../experience/ClientExperience";
 import ReachoutSection from "../reachout/ReachoutSection";
 import Footer from "../footer/Footer";
+import BusinessCard from "../businesscard/BusinessCard";
+import BossCard from "../bosscard/BossCard";
 
 import { CalculatorMain } from "../calculator/calculatormain/CalculatorMain";
 import Projects from "../projects/Projects";
@@ -24,13 +26,61 @@ const ProductPage = lazy(() => import("../pages/ProductPage"));
 const Portfolio = lazy(() => import("../portfolio/Portfolio"));
 const About = lazy(() => import("../about/About"));
 
+const Layout = () => {
+  const location = useLocation();
+  const hideNavbar = location.pathname === "/asfand-card" || "/abdul-card";
+
+  return (
+    <>
+      {!hideNavbar && <NavBar />}
+
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Home />
+                <ProductShowcase />
+                <ClientsGrid />
+                <Projects />
+                <Featured />
+                <SliderSection />
+                <CarouselSection />
+                <ServicesSection />
+                <ClientExperience />
+                <ReachoutSection />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/services/:categoryId"
+            element={<CategoryPage type="services" />}
+          />
+          <Route
+            path="/industries/:categoryId"
+            element={<CategoryPage type="industries" />}
+          />
+          <Route path="/products/:categoryId" element={<ProductPage />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/calculator" element={<CalculatorMain />} />
+          <Route path="/asfand-card" element={<BusinessCard />} />
+          <Route path="/abdul-card" element={<BossCard />} />
+        </Routes>
+      </Suspense>
+    </>
+  );
+};
+
 const Mind = () => {
   const [showPreloader, setShowPreloader] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPreloader(false);
-    }, 3000); 
+    }, 3000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -45,42 +95,7 @@ const Mind = () => {
             position: "relative",
           }}
         >
-          <NavBar />
-
-          <Suspense fallback={<div>Loading...</div>}>
-            <Routes>
-              <Route
-                path="/"
-                element={
-                  <>
-                    <Home />
-                    <ProductShowcase />
-                    <ClientsGrid />
-                    <Projects />
-                    <Featured />
-                    <SliderSection />
-                    <CarouselSection />
-                    <ServicesSection />
-                    <ClientExperience />
-                    <ReachoutSection />
-                    <Footer />
-                  </>
-                }
-              />
-              <Route
-                path="/services/:categoryId"
-                element={<CategoryPage type="services" />}
-              />
-              <Route
-                path="/industries/:categoryId"
-                element={<CategoryPage type="industries" />}
-              />
-              <Route path="/products/:categoryId" element={<ProductPage />} />
-              <Route path="/portfolio" element={<Portfolio />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/calculator" element={<CalculatorMain />} />
-            </Routes>
-          </Suspense>
+          <Layout />
 
           {showPreloader && (
             <Box
@@ -97,7 +112,6 @@ const Mind = () => {
                 zIndex: 2000,
               }}
             >
-              {/* ✅ Replace Preloader with HashLoader */}
               <HashLoader color="#97af90" size={80} />
             </Box>
           )}
