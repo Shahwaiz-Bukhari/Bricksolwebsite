@@ -28,7 +28,7 @@ const About = lazy(() => import("../about/About"));
 
 const Layout = () => {
   const location = useLocation();
-  const hideNavbar = location.pathname === "/asfand-card" || "/abdul-card";
+  const hideNavbar =   location.pathname === "/asfand-card" || location.pathname === "/abdul-card";
 
   return (
     <>
