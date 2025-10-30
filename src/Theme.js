@@ -4,18 +4,18 @@ const theme = createTheme({
   palette: {
     mode: "dark",
     primary: {
-      main: "#0d1117", // deep dark bluish-black background
+      main: "#0d1117", 
       light: "#161b22",
       dark: "#000000",
     },
     secondary: {
-      main: "#00eaff", // cyan/neon blue for glowing accents
+      main: "#00eaff", 
       light: "#33f3ff",
       dark: "#00bcd4",
     },
     background: {
-      default: "#03080f", // overall page background
-      paper: "rgba(10, 15, 25, 0.95)", // card surfaces
+      default: "#03080f",
+      paper: "rgba(10, 15, 25, 0.95)",
     },
     text: {
       primary: "#ffffff",
@@ -51,7 +51,7 @@ const theme = createTheme({
   shape: {
     borderRadius: 25,
   },
-  shadows: Array(25).fill("0 0 20px rgba(0, 234, 255, 0.15)"), // soft cyan glow
+  shadows: Array(25).fill("0 0 20px rgba(0, 234, 255, 0.15)"), 
   components: {
     MuiCard: {
       styleOverrides: {

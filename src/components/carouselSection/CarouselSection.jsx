@@ -25,7 +25,7 @@ const images = [
     subtitle: "The future skyline revealed.",
     description:
       "Take a journey through Al Awalay Rise, where bold vision and cutting-edge design redefine modern urban living in a virtual showcase.",
-    video: "https://www.youtube.com/embed/ScMzIvxBSi4",
+    video: "/videos/alawaly.webm",
   },
   {
     src: "/images/carousel/smartspatial.webp",

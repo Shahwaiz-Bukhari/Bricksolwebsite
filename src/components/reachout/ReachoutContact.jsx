@@ -174,7 +174,7 @@ const ReachoutContact = () => {
         </Box>
       </Box>
 
-      {/* Right Section (Form) */}
+      {/* Right Form */}
       <Box
         sx={{
           flex: 1,
